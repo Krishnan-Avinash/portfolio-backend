@@ -28,4 +28,4 @@ def get_data():
 
 if __name__ == "__main__":
     result = get_data()
-    print("Returned Object:", result)
+    print(result)

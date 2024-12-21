@@ -20,8 +20,6 @@ export const getGFG = async (req, res) => {
       console.error(`stderr: ${stderr}`);
       return res.status(500).json({ error: stderr });
     }
-    console.log(`stdout: ${stdout}`);
-    // Send stdout as a response to the client
-    res.json({ output: stdout });
+    return res.status(200).json({ dataOutput: stdout });
   });
 };
