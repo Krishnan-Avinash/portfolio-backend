@@ -9,7 +9,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-console.log(process.env.PORT);
+// console.log(process.env.PORT);
 
 connectDb();
 app.use("/api/portfolio", clientRouter);
