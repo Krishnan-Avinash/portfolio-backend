@@ -8,12 +8,11 @@ def get_data():
     r=requests.get(url)
     htmlContent=r.content
     soup=BeautifulSoup(htmlContent,'html.parser')
-    text=soup.find_all('script')
+    text=soup.find_all('script')[-1].get_text()
 
     key = 'userData'
 
     start = text.find(key)
-    # print(start)
     if start == -1:
         raise ValueError("userData not found")
 
